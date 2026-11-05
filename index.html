@@ -2,138 +2,219 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Daniel Gonçalves, desenvolvedor em formação.">
-    <title>Daniel Gonçalves | Desenvolvedor</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Daniel Gonçalves, estudante de desenvolvimento de software.">
+  <title>Daniel Gonçalves | Portfólio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">D<span>.</span>G</a>
-            <div class="nav-links">
-                <a href="#sobre">Sobre</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato">Contato</a>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">D<span>.</span>G</a>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">OLÁ, EU SOU DANIEL GONÇALVES</p>
-                <h1>Transformando<br>curiosidade em <span>código.</span></h1>
-                <p class="hero-description">
-                    Desenvolvedor em formação, apaixonado por tecnologia,
-                    programação e por entender como as coisas funcionam.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projetos" class="btn primary">Ver projetos</a>
-                    <a href="https://github.com/RayzinPL" target="_blank" class="btn secondary">Meu GitHub ↗</a>
-                </div>
-            </div>
-            <div class="hero-decoration">
-                <div class="code-card">
-                    <p class="code-comment">// Um pouco sobre mim</p>
-                    <p><span class="purple">const</span> desenvolvedor = {</p>
-                    <p class="indent">nome: <span class="green">"Daniel"</span>,</p>
-                    <p class="indent">linguagem: <span class="green">"C"</span>,</p>
-                    <p class="indent">objetivo: <span class="green">"Evoluir"</span></p>
-                    <p>};</p>
-                    <p class="code-comment">// Sempre aprendendo...</p>
-                </div>
-            </div>
-        </section>
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Abrir menu" aria-expanded="false">☰</button>
 
-        <section id="sobre" class="section">
-            <p class="eyebrow">01 / SOBRE MIM</p>
-            <h2>Conhecimento se constrói <span>fazendo.</span></h2>
-            <p class="section-text">
-                Sou Daniel, de Suzano - SP. Estou construindo minha trajetória
-                na área de tecnologia, estudando programação e explorando
-                diferentes áreas da computação.
-            </p>
-            <p class="section-text">
-                Gosto de aprender na prática, resolver problemas e entender
-                a lógica por trás de cada sistema. Meu interesse por hardware,
-                manutenção e desenvolvimento alimenta minha vontade de criar
-                e evoluir constantemente.
-            </p>
-        </section>
+      <div class="nav-links" id="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Competências</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
 
-        <section id="habilidades" class="section">
-            <p class="eyebrow">02 / HABILIDADES</p>
-            <h2>O que estou <span>aprendendo.</span></h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>C</h3>
-                    <p>Lógica de programação, estruturas, funções e arquivos.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>HTML</h3>
-                    <p>Estruturação e organização de páginas web.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>CSS</h3>
-                    <p>Estilização, layouts e responsividade.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Hardware</h3>
-                    <p>Componentes de computadores, diagnóstico e manutenção.</p>
-                </div>
-            </div>
-        </section>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">OLÁ, MEU NOME É:</p>
+        <h1>Daniel<br><span>Gonçalves.</span></h1>
 
-        <section id="projetos" class="section">
-            <p class="eyebrow">03 / PROJETOS</p>
-            <h2>Coisas que já <span>construí.</span></h2>
+        <p class="hero-description">
+          Estudante de desenvolvimento de software, interessado
+          em programação, tecnologia e hardware.
+        </p>
 
-            <div class="project-card">
-                <div class="project-top">
-                    <span class="project-tag">PROJETO EM C</span>
-                    <span class="project-number">01</span>
-                </div>
-                <h3>Carteira de Investimentos</h3>
-                <p>
-                    Aplicação desenvolvida em linguagem C para cadastrar e
-                    organizar ativos, calcular valores e simular rendimentos
-                    de investimentos.
-                </p>
-                <div class="tags">
-                    <span>C</span>
-                    <span>Structs</span>
-                    <span>Arquivos</span>
-                    <span>Bubble Sort</span>
-                </div>
-                <a href="https://github.com/RayzinPL/Carteira-de-Investimentos-em-C"
-                   target="_blank" class="project-link">
-                    Ver no GitHub ↗
-                </a>
-            </div>
-        </section>
+        <div class="hero-buttons">
+          <a href="#projetos" class="btn primary">Ver projetos</a>
+          <a href="https://github.com/RayzinPL" target="_blank"
+            rel="noopener noreferrer" class="btn secondary">Meu GitHub ↗</a>
+        </div>
+      </div>
 
-        <section id="contato" class="section contact">
-            <p class="eyebrow">04 / CONTATO</p>
-            <h2>Vamos construir algo <span>juntos?</span></h2>
-            <p class="section-text">
-                Estou aberto a oportunidades, projetos e conexões na área
-                de tecnologia.
-            </p>
-            <a href="https://github.com/RayzinPL" target="_blank" class="btn primary">
-                Acessar meu GitHub ↗
-            </a>
-        </section>
-    </main>
+      <div class="hero-decoration">
+        <div class="code-card">
+          <p class="code-comment">// Um pouco sobre mim</p>
+          <p><span class="purple">const</span> desenvolvedor = {</p>
+          <p class="indent">nome: <span class="highlight">"Daniel"</span>,</p>
+          <p class="indent">foco: <span class="highlight">"Software"</span>,</p>
+          <p class="indent">objetivo: <span class="highlight">"Evoluir"</span></p>
+          <p>};</p>
+          <p class="code-comment">// Sempre aprendendo...</p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>© 2026 Daniel Gonçalves. Desenvolvido com curiosidade e código.</p>
-        <p>Suzano - SP, Brasil</p>
-    </footer>
+    <section id="sobre" class="section">
+      <p class="eyebrow">01 / SOBRE MIM</p>
+      <h2>Conheça um pouco mais de mim:</span></h2>
+      <p class="section-text">
+        Sou Daniel, Tenho 19 anos, de Suzano - SP. Estou construindo minha trajetória
+        na área de tecnologia, estudando programação e explorando
+        diferentes áreas da computação. Buscando ser FullStack em um futuro próximo.
+        Atualmente estou fazendo faculdade na <span>Centro Universitário Braz Cubas</span> de Mogi Das Cruzes.
+      </p>
+      <p class="section-text">
+        Gosto de aprender na prática, resolver problemas e entender
+        como as coisas funcionam — do software ao hardware.
+      </p>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="habilidades" class="section">
+      <p class="eyebrow">02 / COMPETÊNCIAS</p>
+      <h2>O que estou <span>desenvolvendo.</span></h2>
+
+      <div class="skill-buttons">
+        <button class="skill-tab active" data-tab="hard"
+          aria-selected="true">Hard Skills</button>
+
+        <button class="skill-tab" data-tab="soft"
+          aria-selected="false">Soft Skills</button>
+
+        <a class="skill-tab cv-button"
+          href="Curriculo Daniel Gonçalves.pdf" download>
+          Baixar CV ↓
+        </a>
+      </div>
+
+      <div class="skill-panel" id="hard">
+        <div class="skills-grid">
+          <article class="skill-card">
+            <i class="devicon-c-plain skill-icon" aria-hidden="true"></i>
+            <h3>C</h3>
+            <p>Lógica, funções, estruturas e arquivos.</p>
+          </article>
+          <article class="skill-card">
+            <i class="devicon-python-plain skill-icon" aria-hidden="true"></i>
+            <h3>Python</h3>
+            <p>Fundamentos e lógica de programação.</p>
+          </article>
+          <article class="skill-card">
+            <i class="devicon-azuresqldatabase-plain skill-icon" aria-hidden="true"></i>
+            <h3>SQL</h3>
+            <p>Consultas e fundamentos de banco de dados.</p>
+          </article>
+          <article class="skill-card">
+            <i class="devicon-html5-plain skill-icon" aria-hidden="true"></i>
+            <h3>HTML</h3>
+            <p>Estruturação de páginas web.</p>
+          </article>
+          <article class="skill-card">
+            <i class="devicon-css3-plain skill-icon" aria-hidden="true"></i>
+            <h3>CSS</h3>
+            <p>Estilização e layouts responsivos.</p>
+          </article>
+          <article class="skill-card">
+            <i class="devicon-javascript-plain skill-icon" aria-hidden="true"></i>
+            <h3>JavaScript</h3>
+            <p>Fundamentos e interatividade web.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="skill-panel" id="soft" hidden>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Resolução de problemas</h3>
+            <p>Buscar soluções de forma lógica e prática.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Aprendizado contínuo</h3>
+            <p>Interesse em aprender e desenvolver novas habilidades.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Trabalho em equipe</h3>
+            <p>Colaboração no desenvolvimento de projetos.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Organização</h3>
+            <p>Estruturar tarefas e manter o foco nos objetivos.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Dedicação</h3>
+            <p>Determinação para sempre conseguir realizar uma tarefa.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Gestão de Tempo</h3>
+            <p>Priorizo sempre as demandas mais importantes para sempre entregar algo antes do prazo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <p class="eyebrow">03 / PROJETOS</p>
+      <h2>O que já <span>construí.</span></h2>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">PROJETO EM C</span>
+          <span class="project-number">01</span>
+        </div>
+
+        <h3>Carteira de Investimentos</h3>
+        <p>
+          Aplicação em C para cadastrar e organizar ativos,
+          calcular valores e simular rendimentos de investimentos.
+        </p>
+
+        <div class="tags">
+          <span>C</span>
+          <span>Structs</span>
+          <span>Arquivos</span>
+          <span>Bubble Sort</span>
+        </div>
+
+        <button class="project-link" id="details-button"
+          aria-expanded="false" aria-controls="project-details">
+          Mais detalhes +
+        </button>
+
+        <div id="project-details" hidden>
+          <p class="details-text">
+            O projeto utiliza funções, estruturas, manipulação de arquivos
+            e ordenação para organizar os ativos e simular investimentos.
+          </p>
+        </div>
+
+        <a href="https://github.com/RayzinPL/Carteira-de-Investimentos-em-C"
+          target="_blank" rel="noopener noreferrer" class="project-link">
+          Ver no GitHub ↗
+        </a>
+      </article>
+    </section>
+
+    <section id="contato" class="section contact">
+      <p class="eyebrow">04 / CONTATO</p>
+      <h2>Vamos conversar<span>?</span></h2>
+      <p class="section-text">
+        Aberto a oportunidades, projetos e conexões na área de tecnologia.
+      </p>
+      <a href="https://github.com/RayzinPL" target="_blank"
+        rel="noopener noreferrer" class="btn primary">
+        Acessar meu GitHub ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Daniel Gonçalves.</p>
+    <p>Suzano - SP, Brasil</p>
+  </footer>
+
 </body>
 </html>

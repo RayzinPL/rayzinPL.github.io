@@ -1,7 +1,54 @@
-console.log("Olá! Bem-vindo ao portfólio de Daniel Gonçalves.");
 
-const footer = document.querySelector("footer p");
+const year = document.querySelector("#year");
+const menuButton = document.querySelector("#menu-toggle");
+const menu = document.querySelector("#nav-links");
+const detailsButton = document.querySelector("#details-button");
+const details = document.querySelector("#project-details");
+const skillTabs = document.querySelectorAll(".skill-tab[data-tab]");
+const skillPanels = document.querySelectorAll(".skill-panel");
 
-if (footer) {
-    footer.textContent = `© ${new Date().getFullYear()} Daniel Gonçalves. Desenvolvido com curiosidade e código.`;
-}
+year.textContent = new Date().getFullYear();
+
+// Menu para dispositivos móveis
+menuButton.addEventListener("click", () => {
+  const open = menu.classList.toggle("open");
+
+  menuButton.setAttribute("aria-expanded", open);
+  menuButton.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  menuButton.textContent = open ? "×" : "☰";
+});
+
+menu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Abrir menu");
+    menuButton.textContent = "☰";
+  });
+});
+
+// Alternar Hard Skills e Soft Skills
+skillTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const selected = tab.dataset.tab;
+
+    skillTabs.forEach(item => {
+      const active = item === tab;
+      item.classList.toggle("active", active);
+      item.setAttribute("aria-selected", active);
+    });
+
+    skillPanels.forEach(panel => {
+      panel.hidden = panel.id !== selected;
+    });
+  });
+});
+
+// Expandir detalhes do projeto
+detailsButton.addEventListener("click", () => {
+  const open = detailsButton.getAttribute("aria-expanded") === "true";
+
+  details.hidden = open;
+  detailsButton.setAttribute("aria-expanded", !open);
+  detailsButton.textContent = open ? "Mais detalhes +" : "Menos detalhes −";
+});
