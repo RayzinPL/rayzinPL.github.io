@@ -2,8 +2,7 @@
 const year = document.querySelector("#year");
 const menuButton = document.querySelector("#menu-toggle");
 const menu = document.querySelector("#nav-links");
-const detailsButton = document.querySelector("#details-button");
-const details = document.querySelector("#project-details");
+const detailsButtons = document.querySelectorAll(".details-button");
 const skillTabs = document.querySelectorAll(".skill-tab[data-tab]");
 const skillPanels = document.querySelectorAll(".skill-panel");
 
@@ -44,11 +43,14 @@ skillTabs.forEach(tab => {
   });
 });
 
-// Expandir detalhes do projeto
-detailsButton.addEventListener("click", () => {
-  const open = detailsButton.getAttribute("aria-expanded") === "true";
+// Expandir detalhes dos projetos
+detailsButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const details = document.getElementById(button.dataset.detailsTarget);
+    const open = button.getAttribute("aria-expanded") === "true";
 
-  details.hidden = open;
-  detailsButton.setAttribute("aria-expanded", !open);
-  detailsButton.textContent = open ? "Mais detalhes +" : "Menos detalhes −";
+    details.hidden = open;
+    button.setAttribute("aria-expanded", !open);
+    button.textContent = open ? "Mais detalhes +" : "Menos detalhes −";
+  });
 });

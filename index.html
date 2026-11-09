@@ -160,10 +160,49 @@
       <p class="eyebrow">03 / PROJETOS</p>
       <h2>O que já <span>construí.</span></h2>
 
-      <article class="project-card">
+      <div class="project-list">
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-tag">PROJETO EM C</span>
+            <span class="project-number">01</span>
+          </div>
+
+          <h3>Quiz em C</h3>
+          <p>
+            Quiz desenvolvido em C com cadastro de perguntas,
+            partidas, histórico e ranking de jogadores.
+          </p>
+
+          <div class="tags">
+            <span>C</span>
+            <span>Structs</span>
+            <span>Arquivos</span>
+            <span>Bubble Sort</span>
+          </div>
+
+          <button class="project-link details-button"
+            data-details-target="quiz-details"
+            aria-expanded="false" aria-controls="quiz-details">
+            Mais detalhes +
+          </button>
+
+          <div id="quiz-details" hidden>
+            <p class="details-text">
+              O projeto permite cadastrar perguntas, jogar partidas e consultar
+              o ranking, salvando perguntas e resultados em arquivos de texto.
+            </p>
+          </div>
+
+          <a href="https://github.com/RayzinPL/Quiz-em-C"
+            target="_blank" rel="noopener noreferrer" class="project-link">
+            Ver no GitHub ↗
+          </a>
+        </article>
+
+        <article class="project-card">
         <div class="project-top">
           <span class="project-tag">PROJETO EM C</span>
-          <span class="project-number">01</span>
+          <span class="project-number">02</span>
         </div>
 
         <h3>Carteira de Investimentos</h3>
@@ -179,7 +218,8 @@
           <span>Bubble Sort</span>
         </div>
 
-        <button class="project-link" id="details-button"
+        <button class="project-link details-button"
+          data-details-target="project-details"
           aria-expanded="false" aria-controls="project-details">
           Mais detalhes +
         </button>
@@ -195,7 +235,8 @@
           target="_blank" rel="noopener noreferrer" class="project-link">
           Ver no GitHub ↗
         </a>
-      </article>
+        </article>
+      </div>
     </section>
 
     <section id="contato" class="section contact">
