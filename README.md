@@ -4,7 +4,6 @@ Portfólio pessoal de Daniel Gonçalves.
 
 ## Links
 
-- [Currículo em PDF](Curriculo%20Daniel%20Gon%C3%A7alves.pdf)
 - [Currículo em DOCX](Curriculo_Daniel_Suporte_Tecnico-1.docx)
 - [LinkedIn](https://www.linkedin.com/in/danielgoncalves-ti/)
 - [Portfólio online](https://rayzinpl.github.io/)
